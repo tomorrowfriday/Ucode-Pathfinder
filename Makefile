@@ -12,6 +12,7 @@ OBJS  =     $(addprefix $(OBJD)/, $(SRC:%.c=%.o))
 all: install clean
 install: $(NAME)
 	@cd ./libmx && make
+	cp ./libmx/libmx.a ./libmx.a
 
 $(NAME): $(OBJS)
 	@ar rcs $@ $^

@@ -8,6 +8,7 @@ int pf_numbersofstrings(const char *file)
     while (data[sizeoffile] != '\0') 
     {
         if (data[sizeoffile] == '\n') numbersofstrings ++;
+        sizeoffile ++;
     }  
     return numbersofstrings;       
 }

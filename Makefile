@@ -5,7 +5,7 @@ SRCD  =     src
 INCD  =     inc
 OBJD  =     obj
 INC   =     pathfinder.h
-SRC   =     main.c
+SRC   =     pf_sizeoffile.c pf_numbersofstrings.c
 INCS  =     $(addprefix $(INCD)/, $(INC))
 SRCS  =     $(addprefix $(SRCD)/, $(SRC))
 OBJS  =     $(addprefix $(OBJD)/, $(SRC:%.c=%.o))
@@ -31,4 +31,4 @@ uninstall: clean
 	@printf "$(NAME)\t   \033[31;1muninstalled\033[0m\n"
 reinstall: uninstall install
 start: 
-	clang -std=c11 -Wall -Wextra -Werror -Wpedantic main.c pathfinder.a && ./a.out
+	clang -std=c11 -Wall -Wextra -Werror -Wpedantic main.c pathfinder.a libmx.a && ./a.out

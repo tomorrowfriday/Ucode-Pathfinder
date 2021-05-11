@@ -5,7 +5,7 @@ SRCD  =     src
 INCD  =     inc
 OBJD  =     obj
 INC   =     pathfinder.h
-SRC   =     pf_sizeoffile.c pf_numbersofstrings.c
+SRC   =     pf_sizeoffile.c pf_numbersofstrings.c pf_stringtoarr.c
 INCS  =     $(addprefix $(INCD)/, $(INC))
 SRCS  =     $(addprefix $(SRCD)/, $(SRC))
 OBJS  =     $(addprefix $(OBJD)/, $(SRC:%.c=%.o))

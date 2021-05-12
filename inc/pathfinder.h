@@ -1,4 +1,4 @@
-#include <../libmx/inc/libmx.h>
+#include "../libmx/inc/libmx.h"
 #include <stdio.h>
 
 #include <sys/types.h>
@@ -7,4 +7,4 @@
 
 int pf_sizeoffile(const char *file);
 int pf_numbersofstrings(const char *file);
-char **pf_stringtoarr(char *data, char *stringsoffile[], int sizeoffile, int numbersofstrings);
+char **pf_stringtoarr(char *data, int sizeoffile, int numbersofstrings);

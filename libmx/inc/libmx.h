@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <wchar.h>
-#include <malloc.h>
+#include <malloc/malloc.h>
 #include <fcntl.h>
 #include <stddef.h>
 

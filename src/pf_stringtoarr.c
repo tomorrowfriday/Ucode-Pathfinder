@@ -1,14 +1,14 @@
 #include "pathfinder.h"
 
-char **pf_stringtoarr(char *data, int sizeoffile, int numbersofstrings)
+char **pf_stringtoarr(char *data, int sizeoffile)
 {
-    char **stringsoffile = NULL;    
+    char **stringsoffile = malloc(sizeof(char*) * sizeoffile);    
     int sortoffile = 0;
     int strlen = 0;
-    for(int x = 0; x < numbersofstrings; x++)
-    {
-    stringsoffile[x] = NULL;
-    }
+    // for(int x = 0; x < numbersofstrings; x++)
+    // {
+    // stringsoffile[x] = NULL;
+    // }
     int countofstring = 0;
     for(;sortoffile < sizeoffile; sortoffile++)
     {

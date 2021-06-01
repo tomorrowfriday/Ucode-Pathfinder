@@ -1,19 +1,38 @@
 #include "libmx.h"
 
-char *mx_itoa(int num){
-    int count = 1;
-    while (num / (int )mx_pow(10, count) != 0){
-    count ++;
-    }
-    char *str = mx_strnew(count);
-    int size = count - 1;
-    for (; size >= 0; size--){
-        str[size] = num % 10 + '0';
-        num = num / 10;
-    }
-    return str;
+static int number_length(int number) 
+{
+	int length = 0;
+
+	while (number) {
+		number /= 10;
+		length++;
+	}
+	return length;
 }
 
-//char *mx_itoa(int num)
-//    printf("%s\n", mx_itoa(551513250));
+char *mx_itoa(int number) 
+{
+	int length = number_length(number);
+	char *result = mx_strnew(number < 0 ? length + 1 : length);
 
+	if (number == 0)
+		return mx_strcpy(result, "0");
+
+	if (number == -2147483648)
+		return mx_strcpy(result, "-2147483648");
+
+	int tmp = number;
+	if (tmp < 0) 
+	{
+		result[length] = '-';
+		tmp = -tmp;
+	}
+	for (int i = 0; i < length; i++) 
+	{
+		result[i] = (tmp % 10) + '0';
+		tmp /= 10;
+	}
+	mx_str_reverse(result);
+	return result;
+}

@@ -5,10 +5,6 @@ char **pf_stringtoarr(char *data, int sizeoffile, int numbersofstrings)
     char **stringsoffile = NULL;    
     int sortoffile = 0;
     int strlen = 0;
-    for(int x = 0; x < numbersofstrings; x++)
-    {
-    stringsoffile[x] = NULL;
-    }
     int countofstring = 0;
     for(;sortoffile < sizeoffile; sortoffile++)
     {

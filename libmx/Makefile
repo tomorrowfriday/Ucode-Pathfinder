@@ -11,8 +11,11 @@ mx_foreach.c mx_binary_search.c mx_strlen.c mx_strcpy.c mx_strcmp.c \
 mx_strnew.c mx_strdup.c mx_print_strarr.c mx_bubble_sort.c mx_quicksort.c mx_itoa.c \
 mx_print_unicode.c mx_swap_char.c mx_nbr_to_hex.c mx_str_reverse.c mx_strjoin.c mx_strdel.c \
 mx_del_strarr.c mx_memset.c mx_file_len.c mx_file_to_str.c mx_strncpy.c mx_strndup.c \
-mx_hex_to_nbr.c mx_memcpy.c mx_memcmp.c mx_realloc.c mx_getsize.c mx_create_node.c \
-mx_push_front.c mx_push_back.c 
+mx_hex_to_nbr.c mx_memcpy.c mx_memcmp.c mx_getsize.c mx_create_node.c \
+mx_push_front.c mx_push_back.c mx_pop_front.c mx_count_words.c mx_count_substr.c \
+mx_del_extra_spaces.c mx_get_char_index.c mx_get_substr_index.c mx_list_size.c \
+mx_memccpy.c mx_memchr.c mx_memmem.c mx_memmove.c mx_memrchr.c mx_pop_back.c \
+mx_replace_substr.c mx_strstr.c mx_strtrim.c mx_strncmp.c
 SRCS  =     $(addprefix $(SRCD)/, $(SRC))
 OBJS  =     $(addprefix $(OBJD)/, $(SRC:%.c=%.o))
 all: install clean

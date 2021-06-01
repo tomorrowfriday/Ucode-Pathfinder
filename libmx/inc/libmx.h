@@ -4,14 +4,17 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <wchar.h>
-#include <malloc/malloc.h>
+#include <malloc.h>
 #include <fcntl.h>
 #include <stddef.h>
+#include <malloc.h>
+#include <stdbool.h>
 
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 
+#define __malloc_size_t size_t
 
 typedef struct s_list
 {
@@ -55,8 +58,23 @@ size_t mx_getsize(void * p);
 t_list *mx_create_node(void *data);
 void mx_push_front(t_list **list, void *data);
 void mx_push_back(t_list **list, void *data);
-void mx_pop_front(t_list **head);
+// void mx_pop_front(t_list **head);
 
-
-//int mx_itoa(int num);
-
+//
+int mx_count_words(const char *str, char c);
+int mx_count_substr(const char *str, const char *sub);
+char *mx_del_extra_spaces(const char *str) ;
+int mx_get_char_index(const char *str, char c);
+int mx_get_substr_index(const char *str, const char *sub);
+int mx_list_size(t_list *list);
+void *mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+void *mx_memchr(const void *s, int c, size_t n);
+void *mx_memmem(const void *big, size_t big_len, const void *little, size_t little_len);
+void *mx_memmove(void *dst, const void *src, size_t len);
+void *mx_memrchr(const void *s, int c, size_t n);
+void mx_pop_back(t_list **head);
+char *mx_replace_substr(const char *str, const char *sub, const char *replace);
+char *mx_strstr(const char *haystack, const char *needle) ;
+char *mx_strtrim(const char *str) ;
+int mx_strncmp(const char *s1, const char *s2, int n) ;
+int mx_is_space(char c);

@@ -8,5 +8,6 @@ char *mx_strcat(char *restrict s1, const char *restrict s2){
             count ++;
             num ++;
         }
+    s1[num++] = '\0';
     return s1;
 }

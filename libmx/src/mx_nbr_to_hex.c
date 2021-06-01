@@ -13,7 +13,7 @@ char *mx_nbr_to_hex(unsigned long nbr){
     while(nbr != 0 ){
         temp = nbr % 16;
         if (temp < 10) temp = temp + 48;
-        else temp = temp + 55;
+        else temp = temp + 87;
         hexadecimalNumber[i++] = temp;
         nbr = nbr / 16;
     }

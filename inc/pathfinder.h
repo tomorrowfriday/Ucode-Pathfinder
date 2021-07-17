@@ -7,4 +7,4 @@
 
 int pf_sizeoffile(const char *file);
 int pf_numbersofstrings(const char *file);
-char **pf_stringtoarr(char *data, int sizeoffile, int numbersofstrings);
+char **pf_stringtoarr(char *data, int sizeoffile);

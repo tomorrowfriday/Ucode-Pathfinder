@@ -42,7 +42,7 @@ int main(int argc, const char **file)
     // }
     for(int x = 0; x < numbersofstrings; x++)
     {
-    printf("%s", pf_stringtoarr(data, sizeoffile, numbersofstrings)[x]);
+    printf("%s", pf_stringtoarr(data, sizeoffile)[x]);
     // printf("%s", stringsoffile[x]); 
     }
     system("leaks -q a.out");
